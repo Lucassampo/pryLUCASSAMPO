@@ -9,9 +9,9 @@ namespace pryLUCASSAMPO
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
-                using(Graphics objetoloco = this.CreateGraphics())
+                using (Graphics objetoloco = this.CreateGraphics())
                 {
                     objetoloco.FillEllipse(Brushes.Black, e.X, e.Y, 5, 5);
                 }
@@ -21,6 +21,12 @@ namespace pryLUCASSAMPO
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dibujarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFirma firma = new frmFirma();
+            firma.ShowDialog();
         }
     }
 }
